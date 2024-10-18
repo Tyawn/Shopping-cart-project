@@ -1,0 +1,116 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  padding: 20px;
+  margin: 0;
+}
+
+h1, h2, h3 {
+  color: #007bff;
+}
+
+/* Container Styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Store and Cart Layout */
+#store, #cart-list {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-top: 20px;
+}
+
+/* Product and Cart Item Styling */
+.product, .cart-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.product:hover, .cart-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Set fixed size for images */
+.product img, .cart-item img {
+  width: 150px; /* Fixed width */
+  height: 150px; /* Fixed height */
+  object-fit: cover; /* Cover to maintain aspect ratio */
+  border-radius: 8px; /* Optional: keep for rounded corners */
+}
+
+/* Buttons */
+button {
+  background-color: #28a745;
+  border: none;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+button.remove-btn {
+  background-color: #dc3545;
+}
+
+button.remove-btn:hover {
+  background-color: #c82333;
+}
+
+/* Cart Total and Payment */
+#cart-total {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+#payment-input {
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Receipt */
+#receipt {
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  #store, #cart-list {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  #store, #cart-list {
+      grid-template-columns: 1fr;
+  }
+}

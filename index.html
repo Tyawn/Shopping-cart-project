@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart Project</title>
+  <link rel="stylesheet" href="src/assets/styles.css">
+</head>
+<body>
+  <h1>Welcome to Terion's fruit Store</h1>
+  <div id="store">
+    <div id="product-list"></div>
+  </div>
+
+  <h2>Your Cart</h2>
+  <div id="cart-list"></div>
+  <h3 id="cart-total">Total: $0</h3>
+
+  <h2>Checkout</h2>
+  <input type="number" id="payment-input" placeholder="Enter payment amount" />
+  <button onclick="handlePayment()">Pay</button>
+
+  <div id="receipt"></div>
+
+  <script src="src/assets/script.js"></script>
+</body>
+</html>
